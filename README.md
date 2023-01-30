@@ -1,5 +1,11 @@
 # Hi there 👋
-aaaaa
+
+  "If you can dodge a wrench, you can dodge a ball." - Patches O'Houlihan
+  
+  "Who do you think you are? I am." - Pete Weber
+  
+  "Frankly, my dear, I don't give a damn" - Rhett Butler
+
 
 <!--
 **AHulseman/AHulseman** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
