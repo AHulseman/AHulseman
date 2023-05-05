@@ -1,0 +1,67 @@
+
+<html>
+  <head>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+
+    <p>
+      <button id="add-task">Add a Task</button>
+      <button id="remove-task">Complete a Task</button>
+    </br>
+      <span id="task-count"></span> Tasks Remaining
+    </p>
+
+    <ul id="task-list">
+    </ul>
+
+    <script>
+      const tasks = [
+        'Do PCP',
+        'Buy groceries',
+        'Commit Arson',
+        'Call your parents',
+        'Eliminate the Bourgeoisie',
+        'Run a marathon',
+        'Drive Drunk',
+        'Visit the grandparents',
+        'Read a book',
+        'Get kicked out of a Walmart',
+        'Water plants',
+        'Procrastinate your programming homework',
+        'Clean kitchen',
+        'Drunk text your Ex-Girlfriend',
+        'Take out the trash',
+        'Buy  more tequila'
+        
+      ];
+
+      const taskList = document.getElementById('task-list');
+      const taskCount = document.getElementById('task-count');
+      const addTaskButton = document.getElementById('add-task');
+      const removeTaskButton = document.getElementById('remove-task');
+
+
+      addTaskButton.addEventListener('click', addTask);
+      removeTaskButton.addEventListener('click', removeTask);
+
+      function addTask() {
+        const randomTask = tasks[Math.floor(Math.random() * tasks.length)];
+        const newTask = document.createElement('li');
+        newTask.textContent = randomTask;
+        taskList.appendChild(newTask);
+        taskCount.textContent = taskList.children.length;
+      }
+
+      function removeTask() {
+        if (taskList.children.length > 0) {
+          taskList.removeChild(taskList.children[0]);
+          taskCount.textContent = taskList.children.length;
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
